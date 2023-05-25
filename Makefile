@@ -11,4 +11,4 @@ build:
 	@docker build --build-arg VERSION=$(VERSION) . -t aki:$(VERSION)
 
 version:
-	@echo $(BUILD_VERSION)
+	@echo $(VERSION)
