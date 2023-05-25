@@ -1,0 +1,15 @@
+version: "3"
+services:
+  aki-web:
+    image: golang:1.20-alpine
+    working_dir: /aki
+    entrypoint: "go run main.go"
+    volumes:
+      - .:/aki
+    environment:
+      - PG_DSN: "postgres://user:password@postgres/cpt?sslmode=disable"
+
+networks:
+  default:
+    external:
+      name: aki-net
