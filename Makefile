@@ -8,7 +8,7 @@ down:
 	docker-compose down
 
 build:
-	@docker build --build-arg VERSION=$(VERSION) . -t aki:$(VERSION)
+	@docker build --build-arg VERSION=$(VERSION) . -t aki:$(VERSION) -t aki:latest
 
 version:
 	@echo $(VERSION)
