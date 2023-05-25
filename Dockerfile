@@ -16,11 +16,13 @@ FROM alpine:3.15
 ENV MIGRATIONS_PATH=/var/lib/aki/migrations
 
 COPY --from=builder /tmp/aki /usr/bin/aki
+COPY --from=builder /aki/config.yaml /var/lib/aki/config.yaml
 COPY --from=goose /bin/goose /usr/bin/goose
 
 ENV DOCS_PATH=/var/lib/aki/docs
 ENV MIGRATIONS_PATH=/var/lib/aki/migrations
 ENV HTTP_PORT=8001
+ENV CONFIG_YAML=/var/lib/aki/config.yaml
 
 COPY ./docs $DOCS_PATH
 COPY ./migrations $MIGRATIONS_PATH
