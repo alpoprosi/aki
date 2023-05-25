@@ -7,7 +7,7 @@ ARG VERSION
 
 RUN apk update
 RUN apk add --no-cache git gcc musl-dev
-RUN go build -ldflags="-X 'main.version=$(VERSION)-$(git rev-parse --short HEAD)'" -o /tmp/aki ./aki
+RUN go build -ldflags="-X 'main.version=$(VERSION)-$(git rev-parse --short HEAD)'" -o /tmp/aki ./
 
 FROM jerray/goose:2.7.0-rc3 as goose
 
