@@ -7,7 +7,7 @@ services:
     volumes:
       - .:/aki
     environment:
-      - PG_DSN: "postgres://user:password@postgres/cpt?sslmode=disable"
+      - PG_DSN: "postgres://user:password@postgres/aki?sslmode=disable"
 
 networks:
   default:

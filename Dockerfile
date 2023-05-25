@@ -29,7 +29,7 @@ RUN apk apk update
 RUN apk add --no-cache git
 
 RUN echo '#! /bin/sh' > /usr/bin/entrypoint.sh
-RUN echo 'goose -dir $MIGRATIONS_PATH postgres "$PG_DSL" up &&' >> /usr/bin/entrypoint.sh
+RUN echo 'goose -dir $MIGRATIONS_PATH postgres "$PG_DSN" up &&' >> /usr/bin/entrypoint.sh
 RUN echo 'aki' >> /usr/bin/entrypoint.sh
 RUN chmod +x /usr/bin/entrypoint.sh
 
