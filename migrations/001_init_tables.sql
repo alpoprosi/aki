@@ -39,7 +39,7 @@ create index idx_categories_names on categories (name);
 create table landlords
 (
     id                    serial primary key,
-    category_id           serial references categories (id) on delete set null,
+    category_id           integer references categories (id) on delete set null,
 
     juridical_name  text not null,
     registrar_job   text not null,
