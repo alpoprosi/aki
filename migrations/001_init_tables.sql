@@ -34,7 +34,7 @@ create table categories
     constraint categorie_name unique (name)
 );
 
-insert into categories (id, name) values (1, "Площадка");
+insert into categories(id, name) values (1, 'Площадка');
 
 create index idx_categories_names on categories (name);
 
