@@ -49,7 +49,7 @@ create table landlords
 
     created_at            timestamp with time zone default now() not null,
     updated_at            timestamp with time zone default now() not null,
-    deleted_at            timestamp with time zone default null,
+    deleted_at            timestamp with time zone default null
 );
 
 create index idx_landlords_categories on landlords (category_id);
