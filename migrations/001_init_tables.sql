@@ -34,12 +34,14 @@ create table categories
     constraint categorie_name unique (name)
 );
 
+insert into categories (id, name) values (1, "Площадка");
+
 create index idx_categories_names on categories (name);
 
 create table landlords
 (
     id                    serial primary key,
-    category_id           serial reference categories on (id),
+    category_id           serial references categories (id) on delete set 1,
 
     juridical_name  text not null,
     registrar_job   text not null,
