@@ -1,4 +1,4 @@
-VERSION=0.0
+VERSION=0.1
 
 up:
 	docker network create aki-net || echo '' > /dev/null
