@@ -25,7 +25,7 @@ create index idx_users_uuid on users using btree (uuid);
 
 create table categories
 (
-    id                    tinyint primary key,
+    id                    serial primary key,
     name                  text not null,
     created_at            timestamp with time zone default now() not null,
     updated_at            timestamp with time zone default now() not null,
@@ -39,7 +39,7 @@ create index idx_categories_names on categories (name);
 create table landlords
 (
     id                    serial primary key,
-    category_id tinyint reference categories on (id),
+    category_id           serial reference categories on (id),
 
     juridical_name  text not null,
     registrar_job   text not null,
