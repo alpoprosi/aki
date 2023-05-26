@@ -21,7 +21,7 @@ COPY --from=goose /bin/goose /usr/bin/goose
 
 ENV DOCS_PATH=/var/lib/aki/docs
 ENV MIGRATIONS_PATH=/var/lib/aki/migrations
-ENV HTTP_PORT=8001
+ENV HTTP_PORT=8000
 ENV CONFIG_YAML=/var/lib/aki/config.yaml
 
 COPY ./docs $DOCS_PATH
