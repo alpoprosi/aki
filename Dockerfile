@@ -21,7 +21,7 @@ COPY --from=goose /bin/goose /usr/bin/goose
 
 ENV DOCS_PATH=/var/lib/aki/docs
 ENV MIGRATIONS_PATH=/var/lib/aki/migrations
-ENV HTTP_PORT=8000
+ENV HTTP_PORT=8888
 ENV CONFIG_YAML=/var/lib/aki/config.yaml
 
 COPY ./docs $DOCS_PATH
@@ -35,5 +35,5 @@ RUN echo 'goose -dir $MIGRATIONS_PATH postgres "$PG_DSN" up &&' >> /usr/bin/entr
 RUN echo 'aki' >> /usr/bin/entrypoint.sh
 RUN chmod +x /usr/bin/entrypoint.sh
 
-EXPOSE 8000
+EXPOSE 8888
 ENTRYPOINT ["/usr/bin/entrypoint.sh"]

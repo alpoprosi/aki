@@ -22,7 +22,7 @@ func (h *ApiHandler) PublicURLs() []ApiURL {
 	return []ApiURL{
 		{
 			Method:  "GET",
-			Path:    "health_check",
+			Path:    "health-check",
 			Handler: h.Health,
 		},
 	}

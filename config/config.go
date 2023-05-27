@@ -15,13 +15,12 @@ const defaultPort = "8080"
 
 type Config struct {
 	Addr string `env:"HTTP_ADDR" envDefault:"127.0.0.1"`
-	Port string `env:"HTTP_PORT" envDefault:"8889"`
+	Port string `env:"HTTP_PORT" envDefault:"8888"`
 
 	PgDSN string `env:"PG_DSN,required"`
 
 	YAMLPath string `env:"CONFIG_YAML" envDefault:"config.yaml"`
 
-	WebPath      string   `yaml:"web_path"`
 	ApiVer       int      `yaml:"api_version"`
 	AllowOrigins []string `yaml:"allow_origins"`
 	LoginURL     string   `yaml:"login_url"`

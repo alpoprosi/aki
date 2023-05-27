@@ -1,7 +1,4 @@
-web_path: "web"
 api_version: 1
 allow_origins:
-  - "http://127.0.0.1:8999"
-  - "http://localhost:8999"
-
-login_url: "auth/login"
+  - "http://127.0.0.1:8888"
+  - "http://localhost:8888"
